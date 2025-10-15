@@ -81,7 +81,8 @@ if __name__ == '__main__':
         try:
             tencent = TencentAPI(
                 secret_id=info['secret_id'],
-                secret_key=info['secret_key']
+                secret_key=info['secret_key'],
+                logger=logger
             )
             l2 = tencent.get_l2_bill(month=args.month)
             if l2 is not None:
